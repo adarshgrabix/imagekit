@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>reCAPTCHA demo</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+<body>
+
+<center><h2>Form</h2>
+
+<form method="POST" action="/submitfinal">
+{% csrf_token %}
+  <label>Name:</label><br>
+  <input type="text" id="fname" name="name" required><br><br>
+  
+   <label>Email:</label><br>
+  <input type="email" id="fname" name="email" required><br><br>
+  
+  
+  <label>Password:</label><br>
+  <input type="password" id="lname" name="password" required><br><br>
+   <div class="g-recaptcha" data-sitekey="6LfTFuMUAAAAAME3-Ap8N5wTF8Y0jnZv-y68gYv5" display="none"></div>
+
+  <input type="submit" value="Submit">
+</form> 
+
+<p></p>
+</center>
+</body>
+</html>

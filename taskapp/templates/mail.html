@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mail</title>
+	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="crossorigin=""/>
+	
+	 <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+	
+	
+	<style>
+	#mapid { height: 180px; }
+	</style>
+	
+	<script>
+	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
+	</script>
+	
+	
+	
+	
+	
+	
+	
+   </head>
+   <body bgcolor=" #fff">
+   <table style="width:100%;border-spacing:0;border-collapse:collapse"> 
+    <tbody>
+       <tr style="text-align:center;background-color:#d51d27">                                  
+	     <td><img height="110px" width="155px" src="http://grabix.in/images/logo.png"></img>     </td>                            
+		                           
+	  </tr> 
+	  </tbody>
+	  </table>
+          <p style="font-family:calibri;margin-top:80px;margin-left:auto;margin-right:auto;size:16px;"><b>Hii,adarsh,{{title}} </b></p> <br>   
+          <p style="font-family:calibri;margin-left:auto;margin-right:auto;size:16px;">Thank you for joining us!<br>
+No doubt, you are here to earn some cashback. Either ways, we'll make it worth your while, with huge cashbacks.
+Here's what we've got for:</p> <br>		  
+   <center>
+   <table border="1" style="width:35%;border-spacing:0;border-collapse:collapse"> 
+    <tbody>
+       <tr>                                  
+	     <td  style="text-align:center;color:#fff;background-color:#337ab7"> <strong>Transaction ID </strong>  </td>   
+          <td  style="text-align:center;color:#fff;background-color:#337ab7"> <strong>Store </strong>   </td> 
+           <td  style="text-align:center;color:#fff; background-color:#337ab7"> <strong>	{{title}} </strong>  </td>  		  
+		                           
+	  </tr> 
+	  <tr>
+	    <td  style="text-align:center;color:#black;background-color:#fff;"><font family="calibri" size="2">65675656</font></td>
+		 <td  style="text-align:center;color:#black;background-color:#fff;"><font family="calibri" size="2">flipkart</font></td>
+		   <td  style="text-align:center;color:#black;background-color:#fff;"><font family="calibri" size="2">Rs 45</font></td>
+	  
+	  
+	  <tr>
+	  
+	  </tbody>
+	  </table><br>
+	  {% for a in objectlist %}
+	  {{a.title}}
+	  
+	  </center>
+	  {% endfor %}
+	  <br>
+	  <form>
+	  <input type="text" name="title">
+	  <button type="submit">send</button>
+	  
+	  </form>
+	  <p style="font-family:calibri;margin-left:auto;margin-right:auto; text-align:justify;size:16px;">
+<hr>
+    <div id="mapid"></div>
+   
+   
+   </body>
+   
+   
+   
+ </html>
